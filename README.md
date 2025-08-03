@@ -9,7 +9,7 @@ It uses three core classes:
 
 ---
 
-## 📘 Classes and Their Responsibilities
+##  Classes and Their Responsibilities
 
 ### 1. Edge
 Represents an edge going from one vertex to another, with a given weight.
