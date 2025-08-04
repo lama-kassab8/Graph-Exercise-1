@@ -68,3 +68,25 @@ class Graph:
 
         # finally, remove the vertex from the graph's list by keeping all the vertices EXCEPT the one that needs to be deleted
         self.vertices = [v for v in self.vertices if v.label != label]
+
+g = Graph()
+
+# Add vertices
+g.add_vertex("A")
+g.add_vertex("B")
+
+# Add an edge A → B with weight 10
+g.add_edge("A", "B", 10)
+
+# Print A's edges
+a = g.find_vertex("A")
+for edge in a.edges:
+    print(f"A → {edge.target.label} (weight: {edge.weight})")
+
+# Remove vertex B
+g.remove_vertex("B")
+
+# Print A's edges again
+print("After removing B:")
+for edge in a.edges:
+    print(f"A → {edge.target.label} (weight: {edge.weight})")
